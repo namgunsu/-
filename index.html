@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta property="og:title" content="인시그니아 반포">
+    <meta property="og:description" content="정혜민 실장 010-9019-7710."> <!-- 썸네일에 뜨는 안내문구 -->
+    <meta property="og:image" content="https://i.imgur.com/scX3h9y.png"> <!-- 썸네일 이미지 URL -->
+    <meta property="og:url" content="https://jeong-hye-min.netlify.app"> <!-- 배포 URL -->
+    <meta property="og:type" content="website">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet"> <!-- 글자폰트 URL -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>인시그니아 반포</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .image-container img {
+            width: 78.7%;  
+            height: auto;  
+            display: block; 
+            margin: 0; 
+        }
+
+        .form-container {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 300px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+
+        .call-button {
+            width: 100%; 
+            max-width: 260px;
+            padding: 10px 0; 
+            text-align: center;
+            margin: 20px auto 0; 
+            background-color: #38a169; 
+            color: white;
+            border-radius: 5px; 
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+            text-decoration: none; 
+            display: block; 
+        }
+
+        .call-button:hover {
+            background-color: #2f855a; 
+        }
+
+        @media (max-width: 768px) {
+            .call-button {
+                max-width: 90%; 
+            }
+        }
+
+        .card-container {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-top: 0; /* 명함을 더 위로 */
+        padding-left: 0px; /* 왼쪽 여백 */
+    }
+
+    .business-card {
+    width: 93%;
+    height: 740px;
+    background-color: black;
+    color: #e7e7e7;
+    font-family: 'Roboto Mono', monospace; /* 납작한 폰트로 설정 */
+    padding: 20px;
+    padding-left: 60px;
+    padding-top: 370px;
+    border-radius: 0px;
+    text-align: left;
+    margin: 0;
+    position: relative;
+}
+
+
+    .business-card .title {
+        font-size: 2rem;
+        color: #FEEEC8;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 15px; /* 부장과 이름 간격 */
+        font-weight: bold;
+        letter-spacing: 21px;
+    }
+    .business-card .title::before {
+    content: '';
+    width: 9px; /* 세로 길이는 그대로 두고 */
+    height: 150px; /* 높이를 더 크게 설정 */
+    background-color: #FEEEC8;
+    display: inline-block;
+    margin-right: 10px;
+    margin-top: -50px; /* 위로 이동 */
+    vertical-align: middle;
+}
+
+    .business-card h1 {
+        font-size: 5rem;
+        color: #FEEEC8;
+        display: inline-block;
+        margin: 0; /* 부장과 같은 라인 */
+    }
+
+    .business-card .phone {
+        font-size: 3rem;
+        margin-top: 5px;
+        color: #e7e7e7;
+        letter-spacing: 6px;
+        font-weight: bold;
+        font-stretch: condensed;
+    }
+
+    .business-card .gallery {
+        font-size: 1.7rem; /* 크기 키움 */
+    font-weight: bold; /* 굵게 설정 */
+    color: #FEEEC8;
+    margin-top: 5px;
+    letter-spacing: 6px; /* 한 글자마다 간격 띄우기 */
+}
+
+    .business-card .address {
+    font-size: 1.7rem; /* 크기 키움 */
+    font-weight: bold; /* 굵게 설정 */
+    color: #FEEEC8;
+    margin-top: 5px;
+    letter-spacing: 6px; /* 한 글자마다 간격 띄우기 */
+}
+
+    .logo-image {
+    position: absolute; /* 명함 내에서 자유롭게 위치 조정 가능 */
+    top: 600px; /* 명함 상단에서 떨어진 거리 */
+    right: 20px; /* 명함 오른쪽에서 떨어진 거리 */
+    width: 100px; /* 로고 이미지의 너비 */
+    height: auto; /* 비율 유지 */
+    width: 14%;
+}
+
+/* 여기부턴 반응형 코드 */
+/* 기존 스타일 유지 */
+.image-container img,
+    .card-container {
+        display: block; /* 기본적으로 보이도록 설정 */
+    }
+
+    @media (max-width: 768px) { 
+    /* 모바일 화면에서 이미지가 꽉 차도록 설정 */
+    .image-container img {
+        width: 100%; /* 컨테이너의 너비에 맞게 조정 */
+        height: auto; /* 비율 유지 */
+        display: block; /* 이미지 정렬 문제 방지 */
+    }
+
+    .card-container {
+        padding: 0px; /* 카드의 여백을 조정 */
+    }
+
+    .business-card {
+        width: 100%; /* 모바일 화면에서도 적절한 크기 유지 */
+        padding-left: 0px; /* 여백을 줄여 가독성 개선 */
+        padding-top: 40px; /* 위쪽 여백 조정 */
+        height: auto; /* 고정 높이 대신 콘텐츠에 맞게 조정 */
+        font-size: 0.9rem; /* 모바일 환경에 맞는 글자 크기 */
+    }
+
+    .business-card .title {
+        font-size: 1rem; /* 제목 크기 축소 */
+        letter-spacing: 10px; /* 글자 간격 조정 */
+    }
+
+    .business-card h1 {
+        font-size: 2rem; /* 이름 크기 축소 */
+    }
+
+    .business-card .phone,
+    .business-card .gallery,
+    .business-card .address {
+        font-size: 1rem; /* 텍스트 크기 축소 */
+        letter-spacing: 3px; /* 글자 간격 축소 */
+    }
+
+    .logo-image {
+        top: auto; /* 로고 위치 자동 조정 */
+        right: 10px; /* 오른쪽 여백 줄임 */
+        width: 20%; /* 로고 크기 축소 */
+    }
+    .form-container {
+        position: fixed; /* 화면에 고정 */
+        bottom: 0; /* 화면 맨 아래에 배치 */
+        right: 0; /* 오른쪽 정렬 */
+        width: 100%; /* 화면 전체 너비로 확장 */
+        z-index: 9999; /* 레이어를 최상단으로 설정 */
+        border-radius: 0; /* 모서리를 직선으로 변경 */
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1); /* 위쪽 그림자 추가 */
+        padding: 10px; /* 패딩 축소 */
+        height: auto; /* 콘텐츠 크기에 맞게 높이 자동 조정 */
+        max-height: 30%; /* 최대 높이를 화면의 30%로 제한 */
+        overflow-y: auto; /* 콘텐츠가 넘칠 경우 스크롤 허용 */
+        top: 680px; /* top 값 추가하여 아래로 내리기 */
+    }
+
+    .form-container h2 {
+        font-size: 1rem; /* 제목 글자 크기 축소 */
+        margin-bottom: 10px; /* 간격 조정 */
+    }
+
+    .form-container input,
+    .form-container button {
+        font-size: 0.9rem; /* 입력창과 버튼의 글자 크기 축소 */
+        padding: 6px; /* 내부 여백 축소 */
+    }
+
+    .call-button {
+        padding: 6px 0; /* 버튼 세로 크기 축소 */
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card-container">
+            <div class="business-card">
+                <!-- 오른쪽 상단 로고 -->
+                <img src="https://i.imgur.com/PubHke4.png" alt="Logo" class="logo-image">
+    
+                <div class="title">
+                    <span>실장</span>
+                    <h1>정혜민</h1>
+                </div>
+                <p class="phone">M 010.9019.7710</p>
+                <p class="gallery">GALLERY</p>
+                <p class="address">서울특별시 서초구 남부순환로 2640</p>
+            </div>
+        </div>
+    </div>
+
+        <section class="section first-section">
+            <div class="image-container">
+                <img src="https://i.imgur.com/FADbua9.jpeg" alt="이미지 설명" class="w-full h-auto">
+            </div>
+
+            <div class="form-container">
+                <h2 class="text-xl font-bold mb-4">관심고객 등록</h2>
+                <form id="registerForm" class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium">이름</label>
+                        <input type="text" required class="w-full px-3 py-2 border rounded-md">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium">연락처</label>
+                        <input type="tel" required class="w-full px-3 py-2 border rounded-md">
+                    </div>
+                    <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700">
+                        등록하기
+                    </button>
+                </form>
+                <a href="tel:010-9019-7710" class="call-button">
+                    전화 상담하기
+                </a>
+            </div>
+        </section>
+
+        <script>
+            document.getElementById('registerForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('관심고객 등록이 완료되었습니다.');
+                this.reset();
+            });
+        </script>
+    </div>
+</body>
+</html>
